@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Footballizer</string>
+    <string name="bt_start_profile_activity">Enter</string>
+    <string name="bt_open_profile">Profile</string>
+    <string name="bt_open_settings">Settings</string>
+    <string name="bt_select_data">Choose View</string>
+    <string name="select_data_dialog">Choose Resource</string>
+    <string name="data_from_camera">Camera</string>
+    <string name="data_from_gallery">Gallery</string>
+    <string name="data_from_project">Saved Project</string>
+    <string name="bt_start_editor">Begin</string>
+    <string name="bt_choose_team">Choose Team</string>
+    <string name="bt_save_share">Save</string>
+    <string name="bt_new">Make New</string>
+    <string name="select_new_dialog">Select new photo, or clear this?</string>
+    <string name="new_clear">Clear</string>
+    <string name="new_photo">New</string>
+</resources>
