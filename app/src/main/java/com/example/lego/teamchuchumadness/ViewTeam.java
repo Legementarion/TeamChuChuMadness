@@ -12,7 +12,7 @@ import android.widget.GridView;
  * @author Lego on 21.03.2016.
  */
 public class ViewTeam extends DialogFragment implements
-        AdapterView.OnItemSelectedListener{
+        AdapterView.OnItemSelectedListener {
 
 
     private TeamAdapter mAdapter;
@@ -28,8 +28,7 @@ public class ViewTeam extends DialogFragment implements
         g.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> parent, View v,
-                                    int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 // TODO Auto-generated method stub
             }
         });
@@ -38,8 +37,7 @@ public class ViewTeam extends DialogFragment implements
     }
 
     @Override
-    public void onItemSelected(AdapterView<?> parent, View v, int position,
-                               long id) {
+    public void onItemSelected(AdapterView<?> parent, View v, int position,long id) {
     }
 
     @Override
