@@ -10,60 +10,46 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener {
 
-    Button teamclick;
-    AlertDialog.Builder dialogBuilder;
-    DialogFragment myDialogFragment;
-    FragmentManager manager;
+    private TextView mSelectText;
     private TeamAdapter mAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        teamclick = (Button) findViewById(R.id.bt_choose_team);
-        manager = getSupportFragmentManager();
+        setContentView(R.layout.team_logo_dialog);
 
+//        mSelectText = (TextView) findViewById(R.id.info);
         final GridView g = (GridView) findViewById(R.id.gridView);
         mAdapter = new TeamAdapter(getApplicationContext(),
-                R.layout.team_logo_dialog);
-//        g.setAdapter(mAdapter);
-//        g.setOnItemSelectedListener(this);
-//        g.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View v,
-//                                    int position, long id) {
-//                // TODO Auto-generated method stub
-//                String Message = "Выбранный элемент: "+ mAdapter.getItem(position);
-////                Toast toast = Toast.makeText(this, Message, Toast.LENGTH_SHORT);
-////                toast.show();
-//
-//            }
-//        });
+               R.layout.team_logo_dialog);
+        g.setAdapter(mAdapter);
+        g.setOnItemSelectedListener(this);
+        g.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-        teamclick.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                myDialogFragment.show(manager, "dialog");
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+                // TODO Auto-generated method stub
+//                mSelectText.setText("Выбранный элемент: "
+//                        + mAdapter.getItem(position));
             }
         });
     }
 
     @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String Message = "Выбранный элемент: "+ mAdapter.getItem(position);
-        Toast toast = Toast.makeText(this, Message, Toast.LENGTH_SHORT);
-        toast.show();
+    public void onItemSelected(AdapterView<?> parent, View v, int position,
+                               long id) {
+//        mSelectText.setText("Выбранный элемент: " + mAdapter.getItem(position));
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-        String Message = "Ничего не выбрано ";
-        Toast toast = Toast.makeText(this, Message, Toast.LENGTH_SHORT);
-        toast.show();
+//        mSelectText.setText("Выбранный элемент: ничего");
     }
 }
