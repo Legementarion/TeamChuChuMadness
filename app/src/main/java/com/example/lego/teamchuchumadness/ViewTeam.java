@@ -23,8 +23,10 @@ public class ViewTeam extends DialogFragment implements
         final GridView g = (GridView) rootView.findViewById(R.id.gridView);
         mAdapter = new TeamAdapter(inflater.getContext().getApplicationContext(),
                 R.layout.team_logo_dialog);
-        g.setAdapter(mAdapter);
-        g.setOnItemSelectedListener(this);
+        if (g.getAdapter() == null) {
+            g.setAdapter(mAdapter);
+            g.setOnItemSelectedListener(this);
+        }
         g.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override

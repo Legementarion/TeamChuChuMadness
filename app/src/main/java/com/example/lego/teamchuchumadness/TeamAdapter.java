@@ -12,11 +12,9 @@ import android.widget.TextView;
  */
 public class TeamAdapter extends ArrayAdapter<String> {
 
-    private static final String[] mContacts = { "Рыжик", "Барсик", "Мурзик",
-            "Мурка", "Васька", "Полосатик", "Матроскин", "Лизка", "Томосина",
-            "Бегемот", "Чеширский", "Дивуар", "Тигра", "Лаура", "Барсик", "Мурзик",
-            "Мурка", "Васька", "Полосатик", "Матроскин", "Лизка", "Томосина",
-            "Бегемот", "Чеширский", "Дивуар", "Тигра", "Лаура" };
+    private static final String[] mContacts = { "Евро2016", "Англия", "Украина",
+            "Италия", "Испания", "Германия", "Россия", "Нидерланды", "Аргентина",
+            "Бразилия", "Портунгалия", "Франция", "Тигра", "Панда", };
 
     Context mContext;
 
@@ -38,7 +36,6 @@ public class TeamAdapter extends ArrayAdapter<String> {
             label = (Button) convertView;
         }
         label.setText(mContacts[position]);
-        label.setPadding(10,10,10,10);
         return (convertView);
     }
 
