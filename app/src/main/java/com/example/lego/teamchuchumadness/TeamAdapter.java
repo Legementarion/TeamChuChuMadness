@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
@@ -18,12 +19,14 @@ public class TeamAdapter extends ArrayAdapter<String> {
     private String[] mContacts ;
     private Context mContext;
 
-
+    public TeamAdapter(Context context, int textViewResourceId, String[] res) {
+        super(context, textViewResourceId, res);
+        this.mContext = context;
+        this.mContacts = res;
+    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
-
         View grid;
 
         if (convertView == null) {
@@ -33,26 +36,12 @@ public class TeamAdapter extends ArrayAdapter<String> {
         } else {
             grid = (View) convertView;
         }
-        mContacts = parent.getResources().getStringArray(R.array.country);
 
         ImageView imageView = (ImageView) grid.findViewById(R.id.imagepart);
         TextView textView = (TextView) grid.findViewById(R.id.textpart);
 
         imageView.setImageResource(R.drawable.fl);
-        imageView.setMaxHeight(10);
-        imageView.setMaxWidth(15);
         textView.setText(mContacts[position]);
         return grid;
     }
-
-    // Конструктор
-    public TeamAdapter(Context context, int textViewResourceId) {
-        super(context, textViewResourceId, context.getResources().getStringArray(R.array.country));
-        // TODO Auto-generated constructor stub
-        this.mContext = context;
-    }
-
-
-
-
 }
