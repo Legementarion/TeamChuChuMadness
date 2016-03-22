@@ -20,65 +20,114 @@
         <item>France</item>
         <item>Germany</item>
         <item>Ukraine</item>
-        <item>Poland</item>
         <item>Russia</item>
         <item>Spain</item>
-        <item>Japan</item>
-        <item>China</item>
+        <item>Portugal</item>
         <item>Turkey</item>
-        <item>Greece</item>
         <item>England</item>
-        <item>Scotland</item>
         <item>Brazil</item>
         <item>Argentina</item>
         <item>Italy</item>
-        <item>LegoLand</item>
     </string-array>
 
-    <string-array name="football_team1">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>0</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>16</item>
-        <item>17</item>
+    <string-array name="football_team_Ukraine">
+        <item>Динамо Киев</item>
+        <item>Металлург Донецк</item>
+        <item>Днепр</item>
+        <item>Таврия Симферополь</item>
+        <item>Карпаты</item>
+        <item>Металлист</item>
+        <item>Харьков</item>
     </string-array>
 
-    <string-array name="football_team2">
-        <item>0</item>
-        <item>9</item>
-        <item>8</item>
-        <item>7</item>
-        <item>6</item>
-        <item>5</item>
-        <item>4</item>
-        <item>3</item>
-        <item>2</item>
-        <item>1</item>
-        <item>11</item>
+    <string-array name="football_team_Portugal">
+        <item>Спортинг</item>
+        <item>Бенфика</item>
+        <item>Порту</item>
+        <item>Брага</item>
+        <item>Маритиму</item>
     </string-array>
 
-    <string-array name="football_team3">
-        <item>a</item>
-        <item>s</item>
-        <item>d</item>
-        <item>f</item>
-        <item>g</item>
-        <item>h</item>
-        <item>j</item>
-        <item>k</item>
-        <item>l</item>
-        <item>o</item>
-        <item>h</item>
+    <string-array name="football_team_Italy">
+        <item>Фиорентина</item>
+        <item>Милан</item>
+        <item>Палермо</item>
+        <item>Интер</item>
+        <item>Рома</item>
+        <item>Ювентуc</item>
+        <item>Лацио</item>
     </string-array>
+
+    <string-array name="football_team_Russia">
+        <item>Спартак Москва</item>
+        <item>Сатурн</item>
+        <item>Зенит</item>
+        <item>Амкар</item>
+        <item>Анжи</item>
+        <item>Волга Ульяновск</item>
+        <item>Динамо Москва</item>
+    </string-array>
+
+    <string-array name="football_team_England">
+        <item>ДинамоМанчестер Юнайтед</item>
+        <item>ДинамоЧелси</item>
+        <item>ДинамоЛиверпуль</item>
+        <item>ДинамоАрсенал</item>
+        <item>ДинамоНьюкасл Юнайтед</item>
+        <item>ДинамоМанчестер сити</item>
+        <item>ДинамоАстон Вилла</item>
+    </string-array>
+
+    <string-array name="football_team_Spain">
+        <item>Барселона</item>
+        <item>Реал Мадрид</item>
+        <item>Атлетик де Бильбао</item>
+        <item>Реал Сосьедад</item>
+        <item>Валенсия</item>
+        <item>Альмерия</item>
+        <item>Атлетико Мадрид</item>
+    </string-array>
+
+    <string-array name="football_team_Germany">
+        <item>Айнтрахт</item>
+        <item>Бавария Мюнхен</item>
+        <item>Байер Леверкузен</item>
+        <item>Боруссия Дортмунд</item>
+        <item>Вердер</item>
+        <item>Гамбург</item>
+        <item>Кёльн</item>
+    </string-array>
+
+    <string-array name="football_team_France">
+        <item>Бордо</item>
+        <item>Ланс</item>
+        <item>Мец</item>
+        <item>Монако</item>
+        <item>Марсель</item>
+        <item>Осер</item>
+        <item>ПСЖ</item>
+    </string-array>
+
+    <string-array name="football_team_Brazil">
+        <item>Атлетико Минейро</item>
+        <item>Ботафого</item>
+        <item>Васко Да Гама</item>
+        <item>Интернасьонал</item>
+        <item>Фламенго</item>
+    </string-array>
+
+    <string-array name="football_team_Turkey">
+        <item>Бешикташ</item>
+        <item>Галатасарай</item>
+        <item>Фенербахче</item>
+    </string-array>
+
+    <string-array name="football_team_Argentina">
+        <item>Бока Хуниорс</item>
+        <item>Ривер Плейт</item>
+        <item>Сан-Лоренсо</item>
+        <item>Архентинос Хуниорс</item>
+        <item>Уракан</item>
+    </string-array>
+
 </resources>

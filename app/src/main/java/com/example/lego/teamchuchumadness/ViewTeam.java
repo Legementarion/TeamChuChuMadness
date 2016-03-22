@@ -1,5 +1,6 @@
 package com.example.lego.teamchuchumadness;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
@@ -16,16 +17,21 @@ import android.widget.Toast;
 public class ViewTeam extends DialogFragment implements
         AdapterView.OnItemSelectedListener {
 
-
     private TeamAdapter mAdapter;
-    String buff;
+    private String[] temp;
+
+    Integer[] mImage = new Integer[]{R.drawable.fl0, R.drawable.fl1,
+            R.drawable.fl2, R.drawable.fl3, R.drawable.fl4,
+            R.drawable.fl5, R.drawable.fl6, R.drawable.fl7,
+            R.drawable.fl8, R.drawable.fl9,R.drawable.fl10};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.team_logo_dialog, container, false);
         final GridView g = (GridView) rootView.findViewById(R.id.gridView);
+        temp = getResources().getStringArray(R.array.country);
         mAdapter = new TeamAdapter(inflater.getContext().getApplicationContext(),
-                R.layout.team_logo_dialog, getResources().getStringArray(R.array.country));
+                R.layout.team_logo_dialog, temp, mImage);
         if (g.getAdapter() == null) {
             g.setAdapter(mAdapter);
             g.setOnItemSelectedListener(this);
@@ -34,16 +40,15 @@ public class ViewTeam extends DialogFragment implements
 
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                buff = ""+position;
-                if (mAdapter.getContext().getResources().getStringArray(R.array.football_team1) == getResources().getStringArray(R.array.football_team1)){
-                    dismiss();
-                    Button teamLogo = (Button) getActivity().findViewById(R.id.bt_choose_team);
-                    teamLogo.setText(buff);
-                }
+                Button teamLogo = (Button) getActivity().findViewById(R.id.bt_choose_team);
+                teamLogo.setText(temp[position]);
+                Drawable img = getContext().getResources().getDrawable(mImage[position]);
+                img.setBounds( 0, 0, 50, 35 );
+                teamLogo.setCompoundDrawables( img, null, null, null );
+                temp = getResources().getStringArray(R.array.football_team_Ukraine);
                 mAdapter = new TeamAdapter(getContext().getApplicationContext(),
-                        R.layout.team_logo_dialog, getResources().getStringArray(R.array.football_team1));
+                        R.layout.team_logo_dialog, temp);
                 g.setAdapter(mAdapter);
-                Toast.makeText(parent.getContext(),""+position,Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -52,7 +57,7 @@ public class ViewTeam extends DialogFragment implements
     }
 
     @Override
-    public void onItemSelected(AdapterView<?> parent, View v, int position,long id) {
+    public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
     }
 
     @Override
