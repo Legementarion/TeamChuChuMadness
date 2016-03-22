@@ -18,21 +18,6 @@ public class TeamAdapter extends ArrayAdapter<String> {
     private String[] mContacts ;
     private Context mContext;
 
-//    public TeamAdapter(Context c) {
-//        mContext = c;
-//    }
-
-//    public int getCount() {
-//        return mThumbIds.length;
-//    }
-//
-//    public Object getItem(int position) {
-//        return mThumbIds[position];
-//    }
-//
-//    public long getItemId(int position) {
-//        return position;
-//    }
 
 
     @Override
@@ -43,7 +28,6 @@ public class TeamAdapter extends ArrayAdapter<String> {
 
         if (convertView == null) {
             grid = new View(mContext);
-            //LayoutInflater inflater = getLayoutInflater();
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
             grid = inflater.inflate(R.layout.cell_grid, parent, false);
         } else {
@@ -60,6 +44,7 @@ public class TeamAdapter extends ArrayAdapter<String> {
         textView.setText(mContacts[position]);
         return grid;
     }
+
     // Конструктор
     public TeamAdapter(Context context, int textViewResourceId) {
         super(context, textViewResourceId, context.getResources().getStringArray(R.array.country));
@@ -67,29 +52,7 @@ public class TeamAdapter extends ArrayAdapter<String> {
         this.mContext = context;
     }
 
-//    @Override
-//    public View getView(int position, View convertView, ViewGroup parent) {
-//        // TODO Auto-generated method stub
-//
-//        Button label = (Button) convertView;
-//        ImageView image = (ImageView) convertView;
-//
-//        if (convertView == null) {
-//            convertView = new Button(mContext);
-//            label = (Button) convertView;
-//            convertView = new ImageView(mContext);
-//            image = (ImageView) convertView;
-//        }
-//        mContacts = parent.getResources().getStringArray(R.array.country);
-//        label.setText(mContacts[position]);
-//        image.setImageResource(R.drawable.fl);
-//        return (convertView);
-//    }
-//
-//    // возвращает содержимое выделенного элемента списка
-//    public String getItem(int position) {
-//        return mContacts[position];
-//    }
+
 
 
 }

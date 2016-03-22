@@ -9,11 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import io.realm.Realm;
+
 
 public class MainActivity extends AppCompatActivity  {
 
     ViewTeam myDialogFragment;
     Button teamLogo;
+    Realm mRealm;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,7 +24,7 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
         myDialogFragment = new ViewTeam();
         teamLogo = (Button) findViewById(R.id.bt_choose_team);
-
+        mRealm.getInstance(getApplicationContext());
         teamLogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,8 +38,5 @@ public class MainActivity extends AppCompatActivity  {
                 }
             }
         });
-
     }
-
-
 }
