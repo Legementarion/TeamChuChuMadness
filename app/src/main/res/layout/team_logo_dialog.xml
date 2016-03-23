@@ -12,6 +12,6 @@
         android:horizontalSpacing="5dp"
         android:verticalSpacing="10dp"
         android:gravity="left"
-        android:columnWidth="200dp" />
+        android:columnWidth="240dp" />
 
 </LinearLayout>
